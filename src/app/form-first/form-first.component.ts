@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form-first',
@@ -15,7 +15,8 @@ export class FormFirstComponent implements OnInit {
   names: string[] = ['Julian', 'Alberto', 'Maria', 'Polo'];
 
   //@Input() parentDataToChild;
-  @Input('parentDataToChild') messageFromParent
+  @Input('parentDataToChild') messageFromParent;
+  @Output() childEvent = new EventEmitter();
 
   constructor() { }
 
@@ -37,6 +38,10 @@ export class FormFirstComponent implements OnInit {
 
   onShowPassword(){
     this.displayPassword = true;
+  }
+
+  onSendEvent(){
+    this.childEvent.emit('Evento desde hijo a Padre');
   }
 
 }

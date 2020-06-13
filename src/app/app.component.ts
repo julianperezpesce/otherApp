@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'otherApp';
   dataToChildFromParent: string = 'Mensaje para componente hijo';
+  message = '';
 }
