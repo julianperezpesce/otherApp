@@ -19,16 +19,20 @@ export class FormFirstComponent implements OnInit {
   @Input('parentDataToChild') messageFromParent;
   @Output() childEvent = new EventEmitter();
   courses = [];
+  errorMessagge = '';
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.courses = this.courseService.getCourses();
-    console.log(this.courses);
-    
+    //this.courses = this.courseService.getCourses();
+    this.courseService.getCourses().subscribe(data=> this.courses = data,
+                                              error=> this.errorMessagge = error);
+        
   }     
 
   onSendForm(email){
+    console.log(this.courses);
+    
     alert(email);
     console.log(email);
     
