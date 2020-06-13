@@ -10,6 +10,7 @@ export class FormFirstComponent implements OnInit {
   status: string = 'Form not submitted';
   defaultName: string = 'Julian';
   user: string = '';
+  displayPassword: boolean = false;
 
   constructor() { }
 
@@ -26,6 +27,11 @@ export class FormFirstComponent implements OnInit {
 
   onDefaultForm(){
     this.defaultName = 'Alberto';
+   
+  }
+
+  onShowPassword(){
+    this.displayPassword = true;
   }
 
 }
