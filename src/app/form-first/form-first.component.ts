@@ -14,7 +14,8 @@ export class FormFirstComponent implements OnInit {
   lightStatus: string = 'red';
   names: string[] = ['Julian', 'Alberto', 'Maria', 'Polo'];
 
-  @Input() parentDataToChild;
+  //@Input() parentDataToChild;
+  @Input('parentDataToChild') messageFromParent
 
   constructor() { }
 
