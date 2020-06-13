@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormFirstComponent implements OnInit {
 
   status: string = 'Form not submitted';
+  defaultName: string = 'Julian';
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class FormFirstComponent implements OnInit {
     alert('Formulario enviado');
     
     this.status = 'Form submitted';
+  }
+
+  onDefaultForm(){
+    this.defaultName = 'Alberto';
   }
 
 }
