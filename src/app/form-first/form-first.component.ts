@@ -9,6 +9,7 @@ export class FormFirstComponent implements OnInit {
 
   status: string = 'Form not submitted';
   defaultName: string = 'Julian';
+  user: string = '';
 
   constructor() { }
 

@@ -5,9 +5,13 @@
          <input  class="form-control" type="text" [value]="defaultName">
      </div>
      <div class="form-group">
+        <label for="my-input"> {{ user }} </label>
+        <input [(ngModel)]="user" class="form-control" type="text" >
+    </div>
+    <div class="form-group">
         <label for="my-input">Email</label>
         <input #email class="form-control" type="email" >
-    </div>   
+    </div>    
     
     <button class="btn btn-primary" (click)="onSendForm(email.value)">Submit</button>
     <hr>
