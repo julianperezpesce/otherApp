@@ -28,4 +28,14 @@
         <p>Contraseña Oculta</p>
     </ng-template>
     <button class="btn btn-danger" (click)="onShowPassword()">Show Password</button>
+    
+    <ng-template [ngSwitch]="lightStatus">
+        <div *ngSwitchCase="'green'">Verde</div>
+        <div *ngSwitchCase="'yellow'">Amarillo</div>
+        <div *ngSwitchCase="'red'">Rojo</div>
+        <div *ngSwitchDefault>Don'w work</div>
+        
+
+    </ng-template>
+
 </div>  
