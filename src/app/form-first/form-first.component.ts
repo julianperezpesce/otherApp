@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-form-first',
@@ -17,10 +18,14 @@ export class FormFirstComponent implements OnInit {
   //@Input() parentDataToChild;
   @Input('parentDataToChild') messageFromParent;
   @Output() childEvent = new EventEmitter();
+  courses = [];
 
-  constructor() { }
+  constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
+    this.courses = this.courseService.getCourses();
+    console.log(this.courses);
+    
   }
 
   onSendForm(email){
