@@ -15,8 +15,10 @@ export class FormFirstComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSendForm(){
-    alert('Formulario enviado');
+  onSendForm(email){
+    alert(email);
+    console.log(email);
+    
     
     this.status = 'Form submitted';
   }

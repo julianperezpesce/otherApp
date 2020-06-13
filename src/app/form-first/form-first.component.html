@@ -6,10 +6,10 @@
      </div>
      <div class="form-group">
         <label for="my-input">Email</label>
-        <input  class="form-control" type="email" >
+        <input #email class="form-control" type="email" >
     </div>   
     
-    <button class="btn btn-primary" (click)="onSendForm()">Submit</button>
+    <button class="btn btn-primary" (click)="onSendForm(email.value)">Submit</button>
     <hr>
     <button class="btn btn-warning" (click)="onDefaultForm()">Default Form</button>
 
