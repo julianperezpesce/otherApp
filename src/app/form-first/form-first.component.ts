@@ -12,6 +12,7 @@ export class FormFirstComponent implements OnInit {
   user: string = '';
   displayPassword: boolean = false;
   lightStatus: string = 'red';
+  names: string[] = ['Julian', 'Alberto', 'Maria', 'Polo'];
 
   constructor() { }
 

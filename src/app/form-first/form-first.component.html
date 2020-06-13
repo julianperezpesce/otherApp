@@ -34,8 +34,10 @@
         <div *ngSwitchCase="'yellow'">Amarillo</div>
         <div *ngSwitchCase="'red'">Rojo</div>
         <div *ngSwitchDefault>Don'w work</div>
-        
-
     </ng-template>
+
+    <div *ngFor="let name of names">
+        <p> {{ name }} </p>
+    </div>
 
 </div>  
