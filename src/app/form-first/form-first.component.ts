@@ -26,7 +26,7 @@ export class FormFirstComponent implements OnInit {
     this.courses = this.courseService.getCourses();
     console.log(this.courses);
     
-  }
+  }     
 
   onSendForm(email){
     alert(email);

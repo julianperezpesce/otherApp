@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormFirstComponent } from './form-first/form-first.component';
 import { FormsModule } from "@angular/forms";
 import { CourseService } from './course.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CourseService } from './course.service';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
 
   ],
   providers: [
