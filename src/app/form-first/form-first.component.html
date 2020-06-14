@@ -1,24 +1,29 @@
- <div class="container mt-5">
-     <h1> {{ errorMessagge }} </h1>
+ <div class="container">
+    <section class="mat-typography">
+        <h1>This header will be styled</h1>
+        <h1 class="mat-h1"> {{ errorMessagge }} </h1>
+      </section>
+    
      <h3>Formulario</h3>
-     <div class="form-group mt-5">
-         <label for="my-input">Nombre</label>
-         <input  class="form-control" type="text" [value]="defaultName">
+     <div >
+         <label >Nombre</label>
+         <input   type="text" [value]="defaultName">
      </div>
-     <div class="form-group">
-        <label for="my-input"> {{ user }} </label>
-        <input [(ngModel)]="user" class="form-control" type="text" >
+     <div >
+        <label f> {{ user }} </label>
+        <input [(ngModel)]="user" type="text" >
     </div>
-    <div class="form-group">
-        <label for="my-input">Email</label>
-        <input #email class="form-control" type="email" >
+    <div >
+        <label >Email</label>
+        <input #email type="email" >
     </div>    
     
-    <button class="btn btn-primary" (click)="onSendForm(email.value)">Submit</button>
+    <button mat-raised-button color="primary" (click)="onSendForm(email.value)">Submit</button>
+    
     <hr>
-    <button class="btn btn-warning" (click)="onDefaultForm()">Default Form</button>
-
-    <p mt-5> {{ status }} </p>
+    <button mat-raised-button color="accent" (click)="onDefaultForm()">Default Form</button>
+    
+    <p > {{ status }} </p>
 
     <div *ngIf="displayPassword; then showPassword; else hidePassword">
     </div>
@@ -28,7 +33,7 @@
     <ng-template #hidePassword>
         <p>Contraseña Oculta</p>
     </ng-template>
-    <button class="btn btn-danger" (click)="onShowPassword()">Show Password</button>
+    <button mat-raised-button color="warn" (click)="onShowPassword()">Show Password</button>
     
     <ng-template [ngSwitch]="lightStatus">
         <div *ngSwitchCase="'green'">Verde</div>
@@ -42,6 +47,7 @@
     </div>
     <h3> {{ messageFromParent }} </h3>
     <hr>
-    <button class="btn btn-primary" (click)="onSendEvent()">Show Password</button>
+    <button (click)="onSendEvent()">Show Password</button>
 
 </div>  
+
